@@ -37,7 +37,9 @@ int main(int argc, char *argv[]){
     //open the file
     ifstream input;
     input.open(argv[1]);
-    int map[10000];
+    int towns; input>>towns;
+    int roads; input>>roads;
+    int map[roads*3];
     int temp;
     int i=0;
     while(input>>temp){
@@ -59,11 +61,9 @@ int main(int argc, char *argv[]){
     }
 
     // get info from input file
-    int towns = map[0];
-    int roads = map[1];
     vector<pair<int, int> > adj[roads];
     for(int i=0; i<roads; i++){
-        addEdge(adj, map[2+(3*i)], map[3+(3*i)], map[4+(3*i)]);
+        addEdge(adj, map[(3*i)], map[1+(3*i)], map[2+(3*i)]);
     }
 
     if (debug){
@@ -74,7 +74,7 @@ int main(int argc, char *argv[]){
     //The amount of liters required can be found as the maximum from the minimal spanning tree of the map
     //We used some code from the internet for finding the minimal spanning tree (Prim)
     //https://www.codespeedy.com/prims-mst-for-adjacency-list-representation-in-cpp/
-    
+
     vector<bool> visited(roads, false);
     // to keep a track if the node has been already visited or not. Initially all are false as no node is visited
     vector<int> connection(roads,-1);
