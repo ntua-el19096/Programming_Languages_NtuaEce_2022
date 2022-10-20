@@ -25,4 +25,4 @@ In this problem we get as input a graph that represents the road grid of some co
 ### The logic behind the solution
 The solution is based on a certain variation of the minimal spanning tree problem where we only have to find the maximum weight of the minimal spanning tree's edges.
 
-The solution was implemented both in C++ and SML.
+The solution was implemented both in C++.
