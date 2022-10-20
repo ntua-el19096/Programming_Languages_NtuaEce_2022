@@ -21,3 +21,8 @@ The solution was implemented both in C++ and SML.
 
 ## 1st Problem: Gas
 In this problem we get as input a graph that represents the road grid of some country. Where nodes represent cities and edges represent motorways. Each edge has a weight that represent the liters of gas required to travel between the two cities that the motorway connects (we assume that the graph is connected). The output must be the minimum number of liters of gas required so that we can travel from every city to any other city (assuming that gas stations appear only in cities and not in the motorways).
+
+### The logic behind the solution
+The solution is based on a certain variation of the minimal spanning tree problem where we only have to find the maximum weight of the minimal spanning tree's edges.
+
+The solution was implemented both in C++ and SML.
